@@ -16,7 +16,6 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter marwan',
-      theme: ThemeData(),
       home: page_one(),
     );
   }

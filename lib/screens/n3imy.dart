@@ -6,6 +6,12 @@ class page_one extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(),
         body: Container(
+          decoration: BoxDecoration(
+            border: Border.all(
+              color: Colors.blueGrey.shade900,
+              width: 6
+            )
+          ),
             height: double.infinity,
             alignment: Alignment.topCenter,
             child: SingleChildScrollView(
@@ -19,9 +25,9 @@ class page_one extends StatelessWidget {
                       child: Text(
                         'طلب عادي',
                         style: TextStyle(
-                            fontSize: 25,
+                            fontSize: 20,
                             fontWeight: FontWeight.bold,
-                            color: Colors.black),
+                            color: Colors.black,),
                         textAlign: TextAlign.center,
                       )),
                   FlatButton(
@@ -29,7 +35,7 @@ class page_one extends StatelessWidget {
                       child: Text(
                         'صدقة',
                         style: TextStyle(
-                            fontSize: 25,
+                            fontSize: 20,
                             fontWeight: FontWeight.bold,
                             color: Colors.black),
                         textAlign: TextAlign.center,
