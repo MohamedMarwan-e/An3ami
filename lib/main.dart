@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter zaher',
+      title: 'Flutter zaherr',
       theme: ThemeData(),
       home: HomeScreen(),
     );
