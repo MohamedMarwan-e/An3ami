@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:toggle_switch/toggle_switch.dart';
 
 class page_one extends StatelessWidget {
   @override
@@ -10,32 +11,49 @@ class page_one extends StatelessWidget {
             alignment: Alignment.topCenter,
             child: SingleChildScrollView(
                 child: Column(children: [
+                  SizedBox(height: 10,),
               Container(
                   child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  FlatButton(
-                      onPressed: null,
-                      child: Text(
-                        'طلب عادي',
-                        style: TextStyle(
-                            fontSize: 25,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black),
-                        textAlign: TextAlign.center,
-                      )),
-                  FlatButton(
-                      onPressed: null,
-                      child: Text(
-                        'صدقة',
-                        style: TextStyle(
-                            fontSize: 25,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black),
-                        textAlign: TextAlign.center,
-                      ))
+                  ToggleSwitch(
+                    activeBgColor: Colors.orange,
+                    inactiveBgColor: Colors.white,
+                    activeFgColor: Colors.black,
+                    cornerRadius: 15,
+                    initialLabelIndex: 0,
+                    fontSize: 16.0,
+                    minWidth: 90.0,
+                    labels: [
+                      'صدقة',
+                      'طلب عادي',
+                    ],
+                    onToggle: (index) {
+                      print('switched to: $index');
+                    },
+                  ),
                 ],
               ))
             ]))));
   }
 }
+// FlatButton(
+// onPressed: null,
+// child: Text(
+// 'طلب عادي',
+// style: TextStyle(
+// fontSize: 25,
+// fontWeight: FontWeight.bold,
+// color: Colors.black),
+// textAlign: TextAlign.center,
+// )),
+// FlatButton(
+// onPressed: null,
+// child: Text(
+// 'صدقة',
+// style: TextStyle(
+// fontSize: 25,
+// fontWeight: FontWeight.bold,
+// color: Colors.black),
+// textAlign: TextAlign.center,
+// ))
