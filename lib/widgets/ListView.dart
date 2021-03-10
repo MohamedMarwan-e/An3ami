@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app_an3ami/screens/n3imy.dart';
+import 'package:get/get.dart';
 
 class listView extends StatelessWidget{
   @override
@@ -28,7 +30,9 @@ class listView extends StatelessWidget{
                           borderRadius: BorderRadius.circular(16),
                          child: GestureDetector(
                              child: Image.asset("assets/images/1.jpg",fit: BoxFit.cover,),
-                           onTap:(){}
+                           onTap:(){
+                               Get.to(PageOne());
+                           }
                          ),
                        )
                     ),

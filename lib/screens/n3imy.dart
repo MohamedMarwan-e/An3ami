@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 
-class page_one extends StatelessWidget {
+class PageOne extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
