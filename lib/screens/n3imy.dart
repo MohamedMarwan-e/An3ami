@@ -12,11 +12,11 @@ class page_one extends StatelessWidget {
             child: SingleChildScrollView(
                 child: Column(children: [
                   SizedBox(height: 10,),
-              Container(
+                  Container(
                   child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  ToggleSwitch(
+                   ToggleSwitch(
                     activeBgColor: Colors.orange,
                     inactiveBgColor: Colors.white,
                     activeFgColor: Colors.black,

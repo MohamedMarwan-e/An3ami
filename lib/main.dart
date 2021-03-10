@@ -1,23 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_an3ami/screens/HomeScreen.dart';
-import 'package:flutter_app_an3ami/screens/n3imy.dart';
+import 'package:flutter_app_an3ami/translation.dart';
+import 'package:get/get.dart';
+
 
 void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatefulWidget {
-  @override
-  _MyAppState createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter marwan',
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(),
-      home: page_one(),
+      home: HomeScreen(),
+      translations: Translation(),
+      locale: Locale('ar'),
+      fallbackLocale: Locale('ar'),
     );
   }
 }

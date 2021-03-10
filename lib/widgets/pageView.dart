@@ -1,29 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:page_view_indicators/circle_page_indicator.dart';
 
-class HomePage extends StatefulWidget {
+class pageview extends StatefulWidget {
   @override
-  HomePageState createState() {
-    return HomePageState();
+  pageviewState createState() {
+    return pageviewState();
   }
 }
 
-class HomePageState extends State<HomePage> {
-  final _items = [
-    Colors.blue,
-    Colors.orange,
-    Colors.green,
+class pageviewState extends State<pageview> {
+  List _items = [
+    "assets/images/2.jpg",
+    "assets/images/3.jpg",
+    "assets/images/0.jpg",
+    "assets/images/1.jpg",
 
   ];
   final _pageController = PageController();
-  final _currentPageNotifier = ValueNotifier<int>(1);
+  final _currentPageNotifier = ValueNotifier<int>(0);
 
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: _buildBody(),
-    );
+    return  _buildBody();
+
   }
 
   _buildBody() {
@@ -47,12 +47,7 @@ class HomePageState extends State<HomePage> {
           itemCount: _items.length,
           controller: _pageController,
           itemBuilder: (BuildContext context, int index) {
-            return Center(
-              child: FlutterLogo(
-
-                size: 80.0,
-              ),
-            );
+            return Image.asset("assets/images/$index.jpg",fit: BoxFit.fill,);
           },
           onPageChanged: (int index) {
             _currentPageNotifier.value = index;
