@@ -8,7 +8,7 @@ class listView extends StatelessWidget{
   Widget build(BuildContext context) {
 
     return Container(
-      height: MediaQuery.of(context).size.height *0.3,
+      height: MediaQuery.of(context).size.height *0.25,
       //color: Colors.red,
       child: ListView.builder(
             scrollDirection: Axis.horizontal,
@@ -18,7 +18,7 @@ class listView extends StatelessWidget{
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    height: MediaQuery.of(context).size.height *0.2,
+                    height: MediaQuery.of(context).size.height *0.15,
                     width: MediaQuery.of(context).size.width *0.3,
                     child: Card(
                       elevation: 5,
@@ -43,7 +43,7 @@ class listView extends StatelessWidget{
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text("تيس بلدي",style: TextStyle(fontSize: 16),),
-                        Text("1000 ر.س",style: TextStyle(fontSize: 10,color: Colors.orange),),
+                        Text("1000 ر.س",style: TextStyle(fontSize: 10,color: Colors.orange[900]),),
                         DecoratedBox(
                           decoration:  BoxDecoration(color: Colors.red),
                           child: Text("الأكثر مبيعا",

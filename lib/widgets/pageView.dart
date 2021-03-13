@@ -42,7 +42,7 @@ class pageviewState extends State<pageview> {
   _buildPageView() {
     return Container(
       color: Colors.black87,
-      height: MediaQuery.of(context).size.height*0.3,
+      height: MediaQuery.of(context).size.height*0.25,
       child: PageView.builder(
           itemCount: _items.length,
           controller: _pageController,

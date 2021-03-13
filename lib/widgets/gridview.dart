@@ -5,24 +5,35 @@ class gridview extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
 
-    return Container(
-      height: MediaQuery.of(context).size.height*0.3,
-      child: StaggeredGridView.countBuilder(
-        crossAxisCount: 4,
-        itemCount: 4,
-        itemBuilder: (BuildContext context, int index) =>  Container(
-            color: Colors.green,
-            child:  Center(
-              child:  CircleAvatar(
-                backgroundColor: Colors.white,
-                child: Text('$index'),
-              ),
-            )),
-        staggeredTileBuilder: (int index) =>
-         StaggeredTile.count(2, index.isEven ? 2 : 1),
-        mainAxisSpacing: 4.0,
-        crossAxisSpacing: 4.0,
-      ),
+    return  StaggeredGridView.count(
+        crossAxisCount: 2,
+        mainAxisSpacing: 8,
+        crossAxisSpacing: 8,
+        padding: EdgeInsets.all(10),
+        staggeredTiles: [
+          StaggeredTile.extent(1, 110),
+          StaggeredTile.extent(1, 110),
+          StaggeredTile.extent(2, 120),
+          StaggeredTile.extent(1, 110),
+          StaggeredTile.extent(1, 110),
+        ],
+        children: [
+          Container(
+            color: Colors.orange,
+          ),
+          Container(
+            color: Colors.orange,
+          ),Container(
+            color: Colors.orange,
+          ),
+          Container(
+            color: Colors.orange,
+          ),
+          Container(
+            color: Colors.orange,
+          ),
+        ],
+
     );
   }
 
