@@ -16,7 +16,7 @@ class MainAppBar extends StatelessWidget with PreferredSizeWidget{
 
             actions: [
               IconButton(icon: Icon(Icons.shopping_cart), onPressed: () {}),
-              IconButton(icon: Icon(Icons.add_alert), onPressed: () {}),
+              IconButton(icon: Icon(Icons.notifications), onPressed: () {}),
             ],
     );
   }

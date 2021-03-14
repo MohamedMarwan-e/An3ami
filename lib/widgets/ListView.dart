@@ -8,7 +8,7 @@ class listView extends StatelessWidget{
   Widget build(BuildContext context) {
 
     return Container(
-      height: MediaQuery.of(context).size.height *0.25,
+      height: 200,
       //color: Colors.red,
       child: ListView.builder(
             scrollDirection: Axis.horizontal,
@@ -18,18 +18,17 @@ class listView extends StatelessWidget{
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    height: MediaQuery.of(context).size.height *0.15,
+                    height:120,
                     width: MediaQuery.of(context).size.width *0.3,
                     child: Card(
                       elevation: 5,
-                      color: Colors.red,
-                      shape: RoundedRectangleBorder(
+                        shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       ),
                        child: ClipRRect(
                           borderRadius: BorderRadius.circular(16),
                          child: GestureDetector(
-                             child: Image.asset("assets/images/1.jpg",fit: BoxFit.cover,),
+                             child: Image.asset("assets/images/1.jpg",fit: BoxFit.fill,),
                            onTap:(){
                                Get.to(PageOne());
                            }

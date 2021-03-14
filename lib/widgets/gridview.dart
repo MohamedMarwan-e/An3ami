@@ -9,6 +9,8 @@ class gridview extends StatelessWidget{
         crossAxisCount: 2,
         mainAxisSpacing: 8,
         crossAxisSpacing: 8,
+        shrinkWrap: true,
+        physics: ScrollPhysics(),
         padding: EdgeInsets.all(10),
         staggeredTiles: [
           StaggeredTile.extent(1, 110),
