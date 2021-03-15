@@ -22,17 +22,22 @@ class gridview extends StatelessWidget{
         children: [
           Container(
             color: Colors.orange,
+            child: Image.asset("assets/images/25.jpg",fit: BoxFit.fill,),
           ),
           Container(
             color: Colors.orange,
+            child: Image.asset("assets/images/25.jpg",fit: BoxFit.fill,),
           ),Container(
             color: Colors.orange,
+            child: Image.asset("assets/images/33.jpg",fit: BoxFit.fill,),
           ),
           Container(
             color: Colors.orange,
+            child: Image.asset("assets/images/25.jpg",fit: BoxFit.fill,),
           ),
           Container(
             color: Colors.orange,
+            child: Image.asset("assets/images/25.jpg",fit: BoxFit.fill,),
           ),
         ],
 
