@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:toggle_switch/toggle_switch.dart';
+import 'package:flutter_app_an3ami/widgets/Toggle_Tab.dart';
 
-class PageOne extends StatelessWidget {
+class PageOne extends StatefulWidget {
+  @override
+  _PageOneState createState() => _PageOneState();
+}
+
+class _PageOneState extends State<PageOne> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -10,50 +15,14 @@ class PageOne extends StatelessWidget {
             height: double.infinity,
             alignment: Alignment.topCenter,
             child: SingleChildScrollView(
-                child: Column(children: [
-                  SizedBox(height: 10,),
-                  Container(
-                  child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                   ToggleSwitch(
-                    activeBgColor: Colors.orange,
-                    inactiveBgColor: Colors.white,
-                    activeFgColor: Colors.black,
-                    cornerRadius: 15,
-                    initialLabelIndex: 0,
-                    fontSize: 16.0,
-                    minWidth: 90.0,
-                    labels: [
-                      'صدقة',
-                      'طلب عادي',
-                    ],
-                    onToggle: (index) {
-                      print('switched to: $index');
-                    },
-                  ),
-                ],
-              ))
-            ]))));
+                child: Column(
+                    children: [
+                      SizedBox(height: 20,),
+                      ToggleTap()
+                    ]
+            )
+            )
+        )
+    );
   }
 }
-// FlatButton(
-// onPressed: null,
-// child: Text(
-// 'طلب عادي',
-// style: TextStyle(
-// fontSize: 25,
-// fontWeight: FontWeight.bold,
-// color: Colors.black),
-// textAlign: TextAlign.center,
-// )),
-// FlatButton(
-// onPressed: null,
-// child: Text(
-// 'صدقة',
-// style: TextStyle(
-// fontSize: 25,
-// fontWeight: FontWeight.bold,
-// color: Colors.black),
-// textAlign: TextAlign.center,
-// ))

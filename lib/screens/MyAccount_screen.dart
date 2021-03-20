@@ -1,11 +1,22 @@
 import 'package:flutter/material.dart';
+class AccountScreen extends StatefulWidget{
+  @override
+  _AccountScreenState createState() => _AccountScreenState();
+}
 
-class AccountScreen extends StatelessWidget{
+class _AccountScreenState extends State<AccountScreen> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(child: Center(child: Text("account"),),),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: <Widget>[
+
+          ],
+        ),
+      ),
     );
   }
-
 }
