@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_an3ami/widgets/appBar.dart';
+import 'package:flutter_app_an3ami/widgets/change_lang.dart';
+import 'package:get/get.dart';
 
 class AccountScreen extends StatefulWidget {
   @override
@@ -21,10 +23,8 @@ class _AccountScreenState extends State<AccountScreen> {
                 color: Colors.white,
               ),
             ),
-            title: Text(
-              'بيانات حسابي',
-            ),
-            subtitle: Text('معلومات شخصية'),
+            title: Text('بيانات حسابي'.tr,),
+            subtitle: Text('معلومات شخصية'.tr),
             trailing: Icon(Icons.keyboard_arrow_left),
             onTap: () {},
           ),
@@ -40,14 +40,10 @@ class _AccountScreenState extends State<AccountScreen> {
                 color: Colors.white,
               ),
             ),
-            title: Text('نقاطي'),
-            subtitle: Text('اسثمر نقاطك واحصل علي كوبون خصم'),
+            title: Text('نقاطي'.tr),
+            subtitle: Text('اسثمر نقاطك واحصل علي كوبون خصم'.tr),
             trailing: Icon(Icons.keyboard_arrow_left),
-            onTap: () {
-            },
-            onLongPress: () {
-              Text('Data');
-            },
+
           ),
           new Divider(
             height: 1.0,
@@ -61,9 +57,12 @@ class _AccountScreenState extends State<AccountScreen> {
                 color: Colors.white,
               ),
             ),
-            title: Text('اللغة'),
-            subtitle: Text('التحكم في اللغه'),
+            title: Text('اللغة'.tr),
+            subtitle: Text('التحكم في اللغه'.tr),
             trailing: Icon(Icons.keyboard_arrow_left),
+            onTap: () {
+            Get.to(changeLang());
+              },
           ),
           new Divider(
             height: 1.0,
@@ -77,8 +76,8 @@ class _AccountScreenState extends State<AccountScreen> {
                 color: Colors.white,
               ),
             ),
-            title: Text('اتصل بنا',),
-            subtitle: Text('للتواصل معنا '),
+            title: Text('اتصل بنا'.tr),
+            subtitle: Text('للتواصل معنا '.tr),
             trailing: Icon(Icons.keyboard_arrow_left),
           ),
           new Divider(
@@ -93,8 +92,8 @@ class _AccountScreenState extends State<AccountScreen> {
                 color: Colors.white,
               ),
             ),
-            title: Text('الشروط والأحكام'),
-            subtitle: Text('قم بمراجعة الشروط والأحكام'),
+            title: Text('الشروط والأحكام'.tr),
+            subtitle: Text('قم بمراجعة الشروط والأحكام'.tr),
             trailing: Icon(Icons.keyboard_arrow_left),
           ),
           new Divider(
@@ -109,8 +108,8 @@ class _AccountScreenState extends State<AccountScreen> {
                 color: Colors.white,
               ),
             ),
-            title: Text('حول التطبيق'),
-            subtitle: Text('تعرف علينا اكثر'),
+            title: Text('حول التطبيق'.tr),
+            subtitle: Text('تعرف علينا اكثر'.tr),
             trailing: Icon(Icons.keyboard_arrow_left),
           ),
           new Divider(
@@ -122,8 +121,8 @@ class _AccountScreenState extends State<AccountScreen> {
               backgroundColor: Colors.cyanAccent,
               child: Image.asset("assets/images/signout.png",fit: BoxFit.cover,width: 25,height: 30,),
             ),
-            title: Text('تسجيل الخروج'),
-            subtitle: Text('يمكنك تسجيل الخروج من حسابك من هنا'),
+            title: Text('تسجيل الخروج'.tr),
+            subtitle: Text('يمكنك تسجيل الخروج من حسابك من هنا'.tr),
             trailing: Icon(Icons.keyboard_arrow_left),
           ),
           new Divider(

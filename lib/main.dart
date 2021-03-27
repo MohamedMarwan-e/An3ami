@@ -61,19 +61,19 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
           items: [
             BottomNavigationBarItem(
               icon: new Icon(Icons.home, ),
-              title: new Text('الرئيسية',),
+              title: new Text('الرئيسية'.tr,),
             ),
             BottomNavigationBarItem(
               icon: new Icon(Icons.ondemand_video,),
-              title: new Text('الفيديوهات',),
+              title: new Text('الفيديوهات'.tr,),
             ),
             BottomNavigationBarItem(
               icon: new Icon(Icons.assignment,),
-              title: new Text('تتبع طلبك',),
+              title: new Text('تتبع طلبك'.tr,),
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.person,),
-              title: Text('حسابي',),
+              title: Text('حسابي'.tr,),
 
             )
           ],

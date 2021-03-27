@@ -25,6 +25,7 @@ dependencies:
   carousel_pro: ^1.0.0
   flutter_toggle_tab: ^1.0.0
   marquee_flutter: ^0.1.4
+  shared_preferences: ^0.5.12+4
 
 
 dev_dependencies:
