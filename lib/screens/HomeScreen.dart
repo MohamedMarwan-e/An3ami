@@ -4,6 +4,7 @@ import 'package:flutter_app_an3ami/widgets/ListView.dart';
 import 'package:flutter_app_an3ami/widgets/appBar.dart';
 import 'package:flutter_app_an3ami/widgets/carousel_images.dart';
 import 'package:flutter_app_an3ami/widgets/gridview.dart';
+import 'package:flutter_app_an3ami/widgets/marquee.dart';
 
 
 
@@ -28,7 +29,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       crossAxisAlignment:CrossAxisAlignment.start ,
                       children: [
                         CarouselImage(context),
-                        //pageview(),
+                        marque(),
+                        SizedBox(height: 10,),
                         listView(),
                         Divider(thickness: 3,),
                         Padding(

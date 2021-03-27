@@ -6,6 +6,11 @@ import 'package:flutter_toggle_tab/flutter_toggle_tab.dart';
 import 'Normal request.dart';
 
 class ToggleTap extends StatefulWidget{
+  final String imageUrl;
+  final String title;
+  final double price;
+  final String about;
+  ToggleTap(this.imageUrl, this.title, this.price, this.about);
   @override
   _ToggleTapState createState() => _ToggleTapState();
 }
@@ -20,16 +25,17 @@ class _ToggleTapState extends State<ToggleTap> {
     return Column(
       children: [
         Container(
+         padding: EdgeInsets.all(5),
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(16),
+            borderRadius: BorderRadius.circular(22),
             border: Border.all(
-              color: Colors.orange,
-              width: 2,
+              color: Colors.black,
+              width: 1,
             ),
           ),
           child: FlutterToggleTab(
             isScroll: false,
-            height: 35,
+            height: 25,
             width: 60,
             borderRadius: 14,
             initialIndex: 0,
@@ -54,7 +60,7 @@ class _ToggleTapState extends State<ToggleTap> {
         ),
         SizedBox(height: 20,),
         _listText[_tabTextIndexSelected] == "طلب عادي" ?
-        NormalRequest():Sadaka()
+        NormalRequest(widget.imageUrl,widget.title,widget.price,widget.about):Sadaka()
       ],
     );
   }

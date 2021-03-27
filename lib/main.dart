@@ -54,23 +54,26 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
         bottomNavigationBar: BottomNavigationBar(
           onTap: onTabTapped,
           currentIndex: _currentIndex,
+         selectedItemColor: Colors.orange,
+          unselectedItemColor: Colors.black,
+          selectedIconTheme:IconThemeData(color:Colors.orange ) ,
           type: BottomNavigationBarType.fixed,
           items: [
             BottomNavigationBarItem(
-              icon: new Icon(Icons.home,color:Colors.black ,),
-              title: new Text('الرئيسية',style: TextStyle(color: Colors.black),),
+              icon: new Icon(Icons.home, ),
+              title: new Text('الرئيسية',),
             ),
             BottomNavigationBarItem(
-              icon: new Icon(Icons.videocam,color:Colors.black),
-              title: new Text('الفيديوهات',style: TextStyle(color: Colors.black)),
+              icon: new Icon(Icons.ondemand_video,),
+              title: new Text('الفيديوهات',),
             ),
             BottomNavigationBarItem(
-              icon: new Icon(Icons.assignment,color:Colors.black),
-              title: new Text('تتبع طلبك',style: TextStyle(color: Colors.black)),
+              icon: new Icon(Icons.assignment,),
+              title: new Text('تتبع طلبك',),
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.person,color:Colors.black),
-              title: Text('حسابي',style: TextStyle(color: Colors.black)),
+              icon: Icon(Icons.person,),
+              title: Text('حسابي',),
 
             )
           ],
